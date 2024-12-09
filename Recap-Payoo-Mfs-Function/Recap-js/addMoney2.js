@@ -9,6 +9,12 @@ document.getElementById('btn-add-money').addEventListener('click', function (eve
 
     // wrong way to verify pin number
     if (pinNumber === 1234) {
+        const balance = getTextFieldValueById('account-balance');
+        // console.log(balance, addMoney);
+
+        const newBalance = balance + addMoney;
+
+        document.getElementById('account-balance').innerText = newBalance;
 
     }
     else {

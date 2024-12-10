@@ -5,6 +5,14 @@ document.getElementById('btn-Cash-Out').addEventListener('click', function (even
 
     const pinNumber = getInputFieldValueById('input-cash-out-pin-number');
 
+    // console.log('inside the click handler', cashOut, pinNumber);
+    if (pinNumber === 1234) {
+        const balance = getTextFieldValueById('account-balance');
+        const newBalance = balance - cashOut;
+        document.getElementById('account-balance').innerText = newBalance;
+    }
+    else {
+        alert('No Money Found..!');
 
-    console.log('inside the click handler', cashOut, pinNumber);
-})
+    }
+});

@@ -5,8 +5,11 @@ document.getElementById('btn-add-money').addEventListener('click', function (eve
 
     const pinNumber = getInputFieldValueById('input-pin-number');
 
-    console.log('add money inside addMoney2js', addMoney, pinNumber);
-
+    // console.log('add money inside addMoney2js', addMoney, pinNumber);
+    if (isNaN(addMoney)) {
+        alert('Failed to add Money');
+        return;
+    }
     // wrong way to verify pin number
     if (pinNumber === 1234) {
         const balance = getTextFieldValueById('account-balance');

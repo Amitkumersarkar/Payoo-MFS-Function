@@ -15,7 +15,12 @@ document.getElementById('btn-add-money').addEventListener('click', function (eve
         const newBalance = balance + addMoney;
 
         document.getElementById('account-balance').innerText = newBalance;
-
+        // add to transaction history and make it dynamic
+        const paragraph = document.createElement('paragraph');
+        paragraph.innerText = `added : ${addMoney} tk.new balance : ${newBalance}`;
+        console.log(paragraph);
+        // should be a common function
+        document.getElementById('transaction-container').appendChild(paragraph);
     }
     else {
         alert('failed to add money');
